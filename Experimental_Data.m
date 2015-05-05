@@ -11,8 +11,6 @@
 % I would ask that you cite this paper as Drummond, Ross, David A. Howey, and Stephen R. Duncan. "Low-order mathematical modelling of electric double layer supercapacitors using spectral methods." Journal of Power Sources 277 (2015): 317-328 if you want to use this code for your own research. 
 % For further details on the work of the Energy Power Group at Oxford, please see epg.eng.ox.ac.uk.
 
-%%
-
 function [A_volt_2V,A_current_2V,A_volt_24V,A_current_24V,A_volt_25V,A_current_25V]= Experimental_Data
 
 N1_2V = 23;
