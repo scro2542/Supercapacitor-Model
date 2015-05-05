@@ -1,4 +1,4 @@
-% This function simulates a constance voltage charging profile for the
+% This function simulates a constant voltage charging profile for the
 % supercapacitor model of Drummond, Ross, David A. Howey, and Stephen R. Duncan. "Low-order mathematical modelling of electric double layer supercapacitors using spectral methods." Journal of Power Sources 277 (2015): 317-328.
 % The model equations are discretised using a spectral collocation method
 % which is implemented using the "cheb.m" function
