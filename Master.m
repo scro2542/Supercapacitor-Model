@@ -14,34 +14,12 @@ clc; clear; close all;
 % To simulate the results of http://jes.ecsdl.org/content/152/5/D79.short, the 3 CC charging times (12.7s,18.7s
 % and 23.2s) were implemented. The experimental results for these charging profiles are stored in different files data_2V.txt, data.txt and data_25V.txt. 
 
-% My name is Ross Drummond (ross.drummond@eng.ox.ac.uk) and I hold the MIT licencse for this code. 
+% My name is Ross Drummond (ross.drummond@eng.ox.ac.uk) and I hold the MIT license for this code. 
 % The accompanying paper for the code can be found at http://www.sciencedirect.com/science/article/pii/S0378775314019739.
 % I would ask that you cite this paper as Drummond, Ross, David A. Howey, and Stephen R. Duncan. "Low-order mathematical modelling of electric double layer supercapacitors using spectral methods." Journal of Power Sources 277 (2015): 317-328 if you want to use this code for your own research. 
 % For further details on the work of the Energy Power Group at Oxford, please see epg.eng.ox.ac.uk.
 
-%% The MIT License (MIT)
-
-%Copyright (c) 2015 Ross Drummond
-
-%Permission is hereby granted, free of charge, to any person obtaining a copy
-%of this software and associated documentation files (the "Software"), to deal
-%in the Software without restriction, including without limitation the rights
-% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%copies of the Software, and to permit persons to whom the Software is
-%furnished to do so, subject to the following conditions:
-
-%The above copyright notice and this permission notice shall be included in all
-%copies or substantial portions of the Software.
-
-%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-%SOFTWARE.
-
-%% Model Set-up
+%%
 [Da,Db,Dc,La,Lb,Lc,K1,K2,Kapa_solid,Kapa_elyte,sigma,epsilon_solid,epsilon_elyte,a,C,F,Na,Nb,Nc] = super_params; %The model parameters
 
 [D_cheba,x_CHEBa] = cheb(Na); [D_chebb,x_CHEBb] = cheb(Nb); [D_chebc,x_CHEBc] = cheb(Nc);% Spectral collocation differentiation matrices.
