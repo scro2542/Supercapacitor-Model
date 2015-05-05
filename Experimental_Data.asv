@@ -1,10 +1,11 @@
 % This function loads the experimental data of
-% http://jes.ecsdl.org/content/152/5/D79.short against which the model
-% simulations are compared. 
+% http://jes.ecsdl.org/content/152/5/D79.short from which the model
+% simulations are comared
 
-% The function outputs are the current and voltage data points for three
-% different CC-CV charging profiles. These profiles are differentiated by
-% their maximum voltages of 2V, 2.4V and 2.5V.
+% The input to the function is the charging time tf, initial state of the system x0 and input i. 
+% For this function, the model input is the voltage, not the current. The model outputs are
+% the voltages (y_store), currents (i_store), simulation times (t_store)
+% and model states (states). The model parameters were obtained from the super_params.m file.
 
 % My name is Ross Drummond (ross.drummond@eng.ox.ac.uk) and I hold the MIT licencse for this code. 
 % The accompanying paper for the code can be found at http://www.sciencedirect.com/science/article/pii/S0378775314019739.
@@ -12,6 +13,7 @@
 % For further details on the work of the Energy Power Group at Oxford, please see epg.eng.ox.ac.uk.
 
 function [A_volt_2V,A_current_2V,A_volt_24V,A_current_24V,A_volt_25V,A_current_25V]= Experimental_Data
+% Loads the experimental data from http://jes.ecsdl.org/content/152/5/D79
 
 N1_2V = 23;
 N2_2V = 51;

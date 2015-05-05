@@ -1,5 +1,19 @@
+% This function simulates a constance voltage charging profile for the
+% supercapacitor model of Drummond, Ross, David A. Howey, and Stephen R. Duncan. "Low-order mathematical modelling of electric double layer supercapacitors using spectral methods." Journal of Power Sources 277 (2015): 317-328.
+% The model equations are discretised using a spectral collocation method
+% which is implemented using the "cheb.m" function
+
+% The input to the function is the charging time tf, initial state of the system x0 and input i. 
+% For this function, the model input is the voltage, not the current. The model outputs are
+% the voltages (y_store), currents (i_store), simulation times (t_store)
+% and model states (states). The model parameters were obtained from the super_params.m file.
+
+% My name is Ross Drummond (ross.drummond@eng.ox.ac.uk) and I hold the MIT licencse for this code. 
+% The accompanying paper for the code can be found at http://www.sciencedirect.com/science/article/pii/S0378775314019739.
+% I would ask that you cite this paper as Drummond, Ross, David A. Howey, and Stephen R. Duncan. "Low-order mathematical modelling of electric double layer supercapacitors using spectral methods." Journal of Power Sources 277 (2015): 317-328 if you want to use this code for your own research. 
+% For further details on the work of the Energy Power Group at Oxford, please see epg.eng.ox.ac.uk.
+
 function [y_store,i_store,t_store,states] = Constant_voltage(tf,x0,i)
-% The constant voltage charging simulation
 [Da,Db,Dc,La,Lb,Lc,K1,K2,Kapa_solid,Kapa_elyte,sigma,epsilon_solid,epsilon_elyte,a,C,F,Na,Nb,Nc] = super_params;% Model parameters
 number = 3; %
 

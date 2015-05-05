@@ -1,5 +1,18 @@
+% This function sets up the initial conditions of the model simulations.
+% The function inputs are the number of Chebyshev nodes in the three
+% domains (Na,Nb,Nc). The model outputs are the initial conditions x0 and
+% constant charging current density i. The initial conditions were chosen
+% such that they agreed to some respect with the model boundary conditions,
+% however, the MATLAB ode15s solver will fix them in the instance of some mismatch. The
+% sucess of the model simulations is dependent upon choosing appropriate
+% initial conditions.
+
+% My name is Ross Drummond (ross.drummond@eng.ox.ac.uk) and I hold the MIT licencse for this code. 
+% The accompanying paper for the code can be found at http://www.sciencedirect.com/science/article/pii/S0378775314019739.
+% I would ask that you cite this paper as Drummond, Ross, David A. Howey, and Stephen R. Duncan. "Low-order mathematical modelling of electric double layer supercapacitors using spectral methods." Journal of Power Sources 277 (2015): 317-328 if you want to use this code for your own research. 
+% For further details on the work of the Energy Power Group at Oxford, please see epg.eng.ox.ac.uk.
+
 function [x0,i] = intitial_cons_current(Na,Nb,Nc)
-% The simulation initial conditions x0 and charging current 
 i = 100/2.747;% Constant current magnitude (A)
 
 %% INITIAL CONDITIONS
