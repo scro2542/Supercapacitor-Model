@@ -1,5 +1,5 @@
 % The outputs of this function are the model parameters which are defined
-% within the code. These parameters were obtained from
+% within the code. The parameters were obtained from
 % http://jes.ecsdl.org/content/152/5/D79.short.
 
 % My name is Ross Drummond (ross.drummond@eng.ox.ac.uk) and I hold the MIT licencse for this code. 
