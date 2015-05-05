@@ -1,4 +1,4 @@
-% This outputs of this function are the model parameters which are defined
+% The outputs of this function are the model parameters which are defined
 % within the code. These parameters were obtained from
 % http://jes.ecsdl.org/content/152/5/D79.short.
 
